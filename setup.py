@@ -5,7 +5,7 @@ package_name = 'tcp2ros_bridge'
 setup(
     name=package_name,
     version='0.0.0',
-    packages=find_packages(exclude=['test']),
+    packages=find_packages(),
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'tcp2ros_bridge = tcp2ros_bridge.tcp_bridge:main',
+            'tcp2ros_bridge = tcp2ros_bridge.main:main',
         ],
     },
 )
