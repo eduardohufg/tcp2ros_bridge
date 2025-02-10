@@ -16,7 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
  #routes
-api.include_router(joy_router, prefix="/connection", tags=["joy"])
+api.include_router(joy_router, prefix="/connection", tags=["connection"])
 
 
 #includes
