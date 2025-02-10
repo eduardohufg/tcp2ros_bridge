@@ -66,4 +66,4 @@ def stop_ros2():
     rclpy.shutdown()
 
 def get_ros2_node() -> ROS2Bridge:
-    return ros2_node  # Función para acceder a ros2_node de forma segura
+    return ros2_node 

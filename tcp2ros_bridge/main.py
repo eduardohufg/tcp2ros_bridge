@@ -4,6 +4,7 @@ import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 from .ros2_bridge import start_ros2, stop_ros2, get_ros2_node
 from .routes.ws_router import joy_router, register_ros2_callback
+from .routes.ws_img import img_router
 
 app = FastAPI()
 api = APIRouter()
@@ -17,6 +18,7 @@ app.add_middleware(
 )
  #routes
 api.include_router(joy_router, prefix="/connection", tags=["connection"])
+api.include_router(img_router, prefix="/connection", tags=["connection"])
 
 
 #includes
